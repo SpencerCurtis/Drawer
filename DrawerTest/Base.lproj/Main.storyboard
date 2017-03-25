@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DrawerTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z2v-It-r27">
+                                <rect key="frame" x="16" y="83" width="343" height="584"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="584" id="h6B-7G-iP5"/>
+                                    <constraint firstAttribute="width" constant="343" id="p6t-UK-Gdv"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="esC-TO-5hZ" kind="embed" id="mBr-Xe-d01"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Z2v-It-r27" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="2zE-w9-Jik"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Z2v-It-r27" secondAttribute="bottom" id="KUZ-wQ-IYv"/>
+                            <constraint firstItem="Z2v-It-r27" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="wak-SE-HKu"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="drawerView" destination="Z2v-It-r27" id="jwn-QA-rbs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+        <!--Browser View Controller-->
+        <scene sceneID="D2n-fC-BFr">
+            <objects>
+                <viewController id="esC-TO-5hZ" customClass="BrowserViewController" customModule="DrawerTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e4G-O9-NL8"/>
+                        <viewControllerLayoutGuide type="bottom" id="rEe-zj-9hk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Emb-l9-O7m">
+                        <rect key="frame" x="0.0" y="0.0" width="343" height="584"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K5x-zr-AIC">
+                                <rect key="frame" x="0.0" y="33" width="343" height="551"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </webView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m4J-wb-UOX">
+                                <rect key="frame" x="150" y="13" width="43" height="6"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="m4J-wb-UOX" secondAttribute="height" multiplier="7:1" id="1y9-av-4fX"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="m4J-wb-UOX" firstAttribute="centerX" secondItem="Emb-l9-O7m" secondAttribute="centerX" id="8hK-af-Kym"/>
+                            <constraint firstItem="m4J-wb-UOX" firstAttribute="width" secondItem="Emb-l9-O7m" secondAttribute="width" multiplier="1/8" id="D59-bh-b7X"/>
+                            <constraint firstItem="K5x-zr-AIC" firstAttribute="leading" secondItem="Emb-l9-O7m" secondAttribute="leading" id="PEO-5e-ErC"/>
+                            <constraint firstItem="m4J-wb-UOX" firstAttribute="top" secondItem="e4G-O9-NL8" secondAttribute="bottom" constant="13" id="X51-RY-SVj"/>
+                            <constraint firstAttribute="trailing" secondItem="K5x-zr-AIC" secondAttribute="trailing" id="cHf-wH-iD7"/>
+                            <constraint firstAttribute="bottom" secondItem="K5x-zr-AIC" secondAttribute="bottom" id="fIW-Da-jcH"/>
+                            <constraint firstItem="K5x-zr-AIC" firstAttribute="top" secondItem="Emb-l9-O7m" secondAttribute="top" constant="33" id="z72-ct-0MS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="grabberThing" destination="m4J-wb-UOX" id="hqT-Bv-tU3"/>
+                        <outlet property="webView" destination="K5x-zr-AIC" id="LTD-Ss-btT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6dV-zk-wZw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="832.79999999999995" y="160.11994002998503"/>
+        </scene>
+    </scenes>
+</document>
