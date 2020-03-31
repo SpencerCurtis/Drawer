@@ -55,7 +55,7 @@ class ViewController: UIViewController, UIGestureRecognizerDelegate {
         
     }
     
-    func panAction(sender: UIPanGestureRecognizer) {
+    @objc func panAction(sender: UIPanGestureRecognizer) {
         
         switch sender.state {
         case .began:
